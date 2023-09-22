@@ -49,7 +49,8 @@
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "nxconf-demo2023:build",
-        "hmr": true
+        "hmr": true,
+        "proxyConfig": "./proxy.conf.json"
       },
       "configurations": {
         "development": {
@@ -78,7 +79,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectName}"],
       "options": {
-        "jestConfig": "jest.config.ts",
+        "jestConfig": "jest.config.app.ts",
         "passWithNoTests": true
       },
       "configurations": {
