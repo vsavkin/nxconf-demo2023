@@ -9,9 +9,6 @@ import { useEffect, useState } from 'react';
 export interface CreditCardAccountDetailsProps {}
 
 export function CreditCardAccountDetails(props: CreditCardAccountDetailsProps) {
-  const { accountId } = useParams<{ accountId: string }>();
-  const account = accounts[+(accountId as string)];
-
   const [transactions, updateData] = useState([]);
   useEffect(() => {
     (async () => {
@@ -25,7 +22,7 @@ export function CreditCardAccountDetails(props: CreditCardAccountDetailsProps) {
   }, [updateData]);
   return (
     <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
-      <h1>{account.name}</h1>
+      <h1>Credit Card</h1>
       <h2>Transactions</h2>
       <Stack spacing={2}>
         {transactions.map((tsx) => (

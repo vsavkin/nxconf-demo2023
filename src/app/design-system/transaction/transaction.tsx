@@ -17,7 +17,7 @@ export interface TransactionData {
 export function Transaction({ transaction }: TransactionProps) {
   return (
     <Paper>
-      <Container sx={{ mt: 1, mb: 1 }}>
+      <Container sx={{ mt: 1, mb: 1 }} className="transaction">
         <Grid container spacing={2}>
           <Grid xs={1} minWidth={100}>
             <DateComponent date={new Date(transaction.date)} />

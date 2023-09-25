@@ -7,6 +7,7 @@ import * as React from 'react';
 import MuiDrawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
+import DocumentScannerIcon from '@mui/icons-material/DocumentScanner';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
@@ -41,6 +42,12 @@ export function Sidebar({ open, onClick }: SidebarProps) {
             <AccountBalanceIcon />
           </ListItemIcon>
           <ListItemText primary="Accounts" />
+        </ListItemButton>
+        <ListItemButton href="/tax-documents">
+          <ListItemIcon>
+            <DocumentScannerIcon />
+          </ListItemIcon>
+          <ListItemText primary="Tax Documents" />
         </ListItemButton>
       </List>
     </Drawer>

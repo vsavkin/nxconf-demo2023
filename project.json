@@ -19,7 +19,7 @@
         "styles": [],
         "scripts": [],
         "isolatedConfig": true,
-        "webpackConfig": "webpack.config.js"
+        "webpackConfig": "webpack.config.ts"
       },
       "configurations": {
         "development": {
