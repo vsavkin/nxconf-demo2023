@@ -1,0 +1,20 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    name: Format
+    steps:
+      - run: pnpm exec nx format:check
+
+  lint:
+    runs-on: ubuntu-latest
+    name: Lint
+    steps:
+      - run: pnpm affected --target=lint
