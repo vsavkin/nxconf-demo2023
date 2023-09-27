@@ -80,6 +80,5 @@
         "linter": "eslint"
       }
     }
-  },
-  "defaultProject": "nxconf-demo2023"
+  }
 }

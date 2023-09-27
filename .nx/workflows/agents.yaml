@@ -1,0 +1,15 @@
+resourceClass: docker_linux_amd64/medium+
+parallelism: 2
+env:
+  CI: 'true'
+steps:
+  - name: Git Checkout
+    uses: nrwl/nx-cloud-workflows/v1.0/workflow-steps/checkout/main.yaml
+
+  - name: NPM Install
+    script: |
+      npm ci
+
+  - name: Run Agent
+    script: |
+      npx nx-cloud start-agent
